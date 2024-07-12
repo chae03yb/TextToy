@@ -1,0 +1,11 @@
+[package]
+name = "texttoy"
+version = "0.1.0"
+edition = "2021"
+authors = [
+    "Chae Yool",
+    "DivingSeagull"
+]
+
+[dependencies]
+ratatui = "0.27.0"
