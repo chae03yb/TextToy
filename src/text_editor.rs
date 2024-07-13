@@ -9,7 +9,7 @@ enum Encoding {
     ASCII,
 }
 
-struct TextEditor {
+pub struct TextEditor {
     cursor_row: usize,
     cursor_col: usize,
     selected_area: (usize, usize),
@@ -21,7 +21,7 @@ struct TextEditor {
 }
 
 impl TextEditor {
-    fn new(file: File) -> Self {
+    pub fn new(file: File) -> Self {
         TextEditor {
             cursor_row: 0,
             cursor_col: 0,
