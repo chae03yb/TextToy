@@ -13,6 +13,7 @@ struct TextEditor {
     cursor_row: usize,
     cursor_col: usize,
     selected_area: Vec<usize>,
+    content: Vec<String>,
 
     language: Language,  // for syntax highlighting
     encoding: Encoding,
@@ -25,6 +26,7 @@ impl TextEditor {
             cursor_row: 0,
             cursor_col: 0,
             selected_area: vec![],
+            content: vec![],
             language: Language::PlainText,
             encoding: Encoding::ASCII,
             file
