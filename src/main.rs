@@ -19,3 +19,4 @@ fn main() {
 
 mod keyboard_input_handler;
 mod text_editor;
+mod test;
