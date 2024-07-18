@@ -1,12 +1,8 @@
 use std::fs::File;
+use crate::encoding::SupportedEncoding;
 
-enum Language {
+pub(crate) enum Language {
     PlainText
-}
-
-enum Encoding {
-    UTF8,
-    ASCII,
 }
 
 pub struct TextEditor {
@@ -16,7 +12,7 @@ pub struct TextEditor {
     content: Vec<String>,
 
     language: Language,  // for syntax highlighting
-    encoding: Encoding,
+    encoding: SupportedEncoding,
     file: File,
 }
 
@@ -28,7 +24,7 @@ impl TextEditor {
             selected_area: (0, 0),
             content: vec![],
             language: Language::PlainText,
-            encoding: Encoding::ASCII,
+            encoding: SupportedEncoding::ASCII,
             file,
         }
     }
@@ -51,7 +47,7 @@ impl TextEditor {
         self.language = language;
     }
 
-    fn set_encoding(&mut self, encoding: Encoding) {
+    fn set_encoding(&mut self, encoding: SupportedEncoding) {
         self.encoding = encoding;
     }
 
